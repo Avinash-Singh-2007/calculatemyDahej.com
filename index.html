@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dowry Calculator</title>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+<body>
+    <!-- Dowry Calculator -->
+  <h1 style="text-align:center;">Dowry Calculator</h1>
+
+  <div class="problem2">
+    <div class="dowry_container">
+      <h3>How much dowry are you worth?</h3>
+      <form action="">
+        <div class="form_element">
+
+          <label for="age">Age</label>
+          <select name="age" id="age" required>
+            <option value="" disabled selected hidden>Select</option>
+            <option value="1">18-24 Years</option>
+            <option value="2">25-30 Years</option>
+            <option value="3">31-35 Years</option>
+            <option value="4">36-40 Years</option>
+            <option value="5">More than 40 Years</option>
+          </select>
+
+          <label for="profession">Profession</label>
+          <select name="profession" id="profession" required>
+            <option value="" disabled selected hidden>Select</option>
+            <option value="1">Engineer</option>
+            <option value="2">Doctor</option>
+            <option value="3">Entrepreneur</option>
+            <option value="4">Government Job</option>
+            <option value="5">Other</option>
+          </select>
+
+          <label for="salary">Monthly Salary</label>
+          <select name="salary" id="salary" required>
+            <option value="" disabled selected hidden>Select</option>
+            <option value="1">Less than 50,000</option>
+            <option value="2">50,000-1 lakh</option>
+            <option value="3">1-2 lakh</option>
+            <option value="4">2-5 lakh</option>
+            <option value="5">More than 5 lakh</option>
+          </select>
+
+          <label for="education">Education</label>
+          <select name="education" id="education" required>
+            <option value="" disabled selected hidden>Select</option>
+            <option value="1">Anpadh</option>
+            <option value="2">High School</option>
+            <option value="3">Diploma</option>
+            <option value="4">Graduation</option>
+            <option value="5">Post Graduation</option>
+          </select>
+
+          <label for="residence">Residence</label>
+          <select name="residence" id="residence" required>
+            <option value="" disabled selected hidden>Select</option>
+            <option value="1">Self-Owned</option>
+            <option value="2">Rented</option>
+            <option value="3">Parent-Owned</option>
+          </select>
+
+          <label for="country">Country</label>
+          <select name="country" id="country" required>
+            <option value="" disabled selected hidden>Select</option>
+            <option value="1">India</option>
+            <option value="2">Abroad</option>
+          </select>
+
+          <button class="boton" type="button" onclick="goToResult()">Calculate</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+
+</body>
+</html>
+    <script>
+      let currentdisplay = "";
+      document.querySelector("#display").value = currentdisplay;
+
+      let random_num;
+      let computer_choice;
+
+      function goToResult() {
+    window.location.href = "aware.html";
+  }
+    </script>
+  </body>
+</html>
