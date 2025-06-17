@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculate My Dahej</title>
-    <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculate My Dahej</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+</head>
 <body>
-    <!-- Calculate My Dahej -->
   <h1 style="text-align:center;">Calculate My Dahej</h1>
 
   <div class="problem2">
     <div class="dowry_container">
       <h3>How much dowry are you worth?</h3>
-      <form action="">
+      <form id="dowryForm">
         <div class="form_element">
 
           <label for="age">Age</label>
@@ -75,26 +71,21 @@
             <option value="2">Abroad</option>
           </select>
 
-          <button class="boton" type="button" onclick="goToResult()">Calculate</button>
+          <button class="boton" type="submit">Calculate</button>
         </div>
       </form>
     </div>
   </div>
 
-
-
+  <script>
+    document.getElementById('dowryForm').addEventListener('submit', function (e) {
+      e.preventDefault(); // stop form submission to manually check
+      if (this.checkValidity()) {
+        window.location.href = "aware.html"; // if valid, go to next page
+      } else {
+        this.reportValidity(); // show built-in browser validation
+      }
+    });
+  </script>
 </body>
-</html>
-    <script>
-      let currentdisplay = "";
-      document.querySelector("#display").value = currentdisplay;
-
-      let random_num;
-      let computer_choice;
-
-      function goToResult() {
-    window.location.href = "aware.html";
-  }
-    </script>
-  </body>
 </html>
